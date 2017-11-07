@@ -1,20 +1,17 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1 class="text-center">My Tasks</h1>
-    </div>
-  </div>
+  <h1 class="text-center">My Tasks</h1>
   <div class="row">
     <% @tasks.each do |task|  %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="col-xs-12 col-sm-6">
         <div class="task">
           <li><i class="fa fa-square-o checkbox" aria-hidden="true"></i>
-            <%= task.title %>
+            <%= link_to task.title, task_path(task.id) %>
           </li>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
 
 
